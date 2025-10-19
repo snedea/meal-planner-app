@@ -2,7 +2,7 @@
 
 import { create } from 'zustand';
 import api from '../services/api';
-import { Food, FoodSearchResult } from '../types/food.types';
+import { Food } from '../types/food.types';
 
 interface FoodState {
   searchResults: Food[];
@@ -32,10 +32,10 @@ export const useFoodStore = create<FoodState>((set) => ({
 
     set({ isLoading: true, error: null });
     try {
-      const response = await api.get<FoodSearchResult>(`/foods/search`, {
+      const response = await api.get<Food[]>(`/foods/search`, {
         params: { q: query, limit: 20 },
       });
-      set({ searchResults: response.data.results, isLoading: false });
+      set({ searchResults: response.data, isLoading: false });
     } catch (error: any) {
       const errorMessage = error.response?.data?.detail || 'Food search failed';
       set({ error: errorMessage, isLoading: false, searchResults: [] });

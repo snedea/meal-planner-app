@@ -52,7 +52,7 @@ export const MealLogForm: React.FC = () => {
         <h3 className="text-lg font-semibold mb-3">Search for Food</h3>
         <FoodSearchBar />
 
-        {searchResults.length > 0 && !selectedFood && (
+        {searchResults?.length > 0 && !selectedFood && (
           <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 max-h-96 overflow-y-auto">
             {searchResults.map((food) => (
               <FoodCard key={food.id} food={food} onSelect={setSelectedFood} />
