@@ -45,6 +45,42 @@ A comprehensive web application for meal planning, nutrition tracking, and recip
 - **Charts:** Recharts
 - **HTTP Client:** Axios
 
+## Screenshots
+
+### API Documentation (Swagger UI)
+
+The application provides comprehensive API documentation through an interactive Swagger UI interface. Below are screenshots of the various API endpoint groups:
+
+#### Full API Overview
+![Swagger UI Overview](docs/screenshots/01-swagger-overview.png)
+
+The complete API documentation showing all available endpoint groups including Authentication, Users, Foods, Recipes, and Meal Logs.
+
+#### Authentication Endpoints
+![Authentication Endpoints](docs/screenshots/02-auth-endpoints.png)
+
+User registration and login endpoints with JWT token-based authentication.
+
+#### User Management
+![User Management](docs/screenshots/03-users-endpoints.png)
+
+Endpoints for managing user profiles and nutrition goals.
+
+#### Food Database
+![Food Endpoints](docs/screenshots/04-foods-endpoints.png)
+
+Food search, retrieval, and custom food creation endpoints with Redis caching.
+
+#### Recipe Management
+![Recipe Endpoints](docs/screenshots/05-recipes-endpoints.png)
+
+Recipe CRUD operations with automatic nutrition calculation based on ingredients.
+
+#### Meal Logging
+![Meal Logs Endpoints](docs/screenshots/06-meal-logs-endpoints.png)
+
+Meal logging endpoints with daily summaries and nutrition tracking.
+
 ## Quick Start
 
 ### Prerequisites
@@ -242,6 +278,7 @@ The MVP includes 8 mocked foods for demonstration:
 - **Requirements:** `.context-foundry/scout-report.md` - Feature specifications
 - **Build Log:** `.context-foundry/build-log.md` - Implementation details
 - **Backend README:** `backend/README.md` - Backend-specific documentation
+- **Screenshot Guide:** `docs/SCREENSHOT_GUIDE.md` - Automated screenshot capture instructions
 
 ## Testing
 
