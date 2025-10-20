@@ -88,9 +88,14 @@ export const useAuthStore = create<AuthState>()(
         try {
           const response = await api.get<User>('/users/me');
           set({ user: response.data });
-        } catch (error) {
+        } catch (error: any) {
           console.error('Failed to fetch user:', error);
-          set({ error: 'Failed to fetch user profile' });
+          // If authentication fails (401), logout to clear stale tokens
+          if (error.response?.status === 401) {
+            get().logout();
+          } else {
+            set({ error: 'Failed to fetch user profile' });
+          }
         }
       },
 

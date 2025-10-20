@@ -81,6 +81,30 @@ Recipe CRUD operations with automatic nutrition calculation based on ingredients
 
 Meal logging endpoints with daily summaries and nutrition tracking.
 
+### Application Interface
+
+The React frontend provides an intuitive interface for tracking meals, searching foods, and monitoring nutrition goals:
+
+#### Dashboard - Daily Overview
+![Meal Planner Dashboard](docs/screenshots/MealPlannerDashboard1.png)
+
+Main dashboard showing daily calorie progress, macronutrient breakdown (protein, carbs, fats), and quick access to key features.
+
+#### Dashboard - Nutrition Summary
+![Dashboard Nutrition Summary](docs/screenshots/MealPlannerDashboard2.png)
+
+Detailed view of today's nutritional summary with visual progress indicators for calories and macros.
+
+#### Food Search Interface
+![Food Search](docs/screenshots/FoodSearch.png)
+
+Comprehensive food search interface with real-time search results, nutrition information, and the ability to add foods to meal logs.
+
+#### Nutrition Facts Label
+![Nutrition Facts Label](docs/screenshots/NutritionFactsLabel.png)
+
+Detailed nutrition facts label view showing complete nutritional breakdown for foods and recipes in a familiar FDA-style format.
+
 ## Quick Start
 
 ### Prerequisites
